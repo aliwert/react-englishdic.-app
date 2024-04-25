@@ -7,7 +7,7 @@
 
 - This is a English Dictionary web application built using React. It allows users to search for the meaning, example usage, and synonyms of English words.
 
-## Features
+## 🤖Features
 
 - Word Search: Users can enter a word in the search bar and press enter to get its meaning, example usage, and synonyms.
 - Synonyms: The application displays up to 5 synonyms for the searched word.
