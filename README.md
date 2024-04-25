@@ -4,4 +4,4 @@
 ![Yarn](https://img.shields.io/badge/yarn-%232C8EBB.svg?style=for-the-badge&logo=yarn&logoColor=white)
 
 # 📖 English Dictionary App. 
-## - This is a English Dictionary web application built using React. It allows users to search for the meaning, example usage, and synonyms of English words.
+- This is a English Dictionary web application built using React. It allows users to search for the meaning, example usage, and synonyms of English words.
