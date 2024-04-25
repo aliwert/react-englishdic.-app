@@ -13,6 +13,12 @@
 - Synonyms: The application displays up to 5 synonyms for the searched word.
 - Clear Search: Users can clear the search input and reset the displayed information.
 
+## How to Use ❓
+1. Type the word you want to search for into the search bar and press "Enter".
+2. Explore the information about the word, including its meaning, example usage, and synonyms.
+3. Click on the volume icon to listen to the pronunciation of the word.
+4. To search for more words, enter a new word into the search bar and press "Enter".
+
 ## 👻Usage
 
 1. Clone this repository to your local machine.
