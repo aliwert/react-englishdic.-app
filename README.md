@@ -42,3 +42,6 @@ If you prefer using Yarn package manager, you can follow the steps below to run 
 - CSS
 - Fetch API for data retrieval
 - Google Fonts
+
+## 👽Contributions
+- Contributions are welcome! If you find any issues or have suggestions for improvements, feel free to open an issue or submit a pull request.
