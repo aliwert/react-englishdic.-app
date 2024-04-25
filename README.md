@@ -14,6 +14,7 @@
 - Word Search: Users can enter a word in the search bar and press enter to get its meaning, example usage, and synonyms.
 - Synonyms: The application displays up to 5 synonyms for the searched word.
 - Clear Search: Users can clear the search input and reset the displayed information.
+- Pronunciation: Users can listen to the pronunciation of the searched word by clicking on the volume icon.
 
 ## How to Use ❓
 1. Type the word you want to search for into the search bar and press "Enter".
