@@ -10,3 +10,11 @@
 - Word Search: Users can enter a word in the search bar and press enter to get its meaning, example usage, and synonyms.
 - Synonyms: The application displays up to 5 synonyms for the searched word.
 - Clear Search: Users can clear the search input and reset the displayed information.
+
+## 👻Usage
+
+1. Clone this repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies by running `npm install`.
+4. Start the development server by running `npm start`.
+5. Open your browser and visit `http://localhost:3000` to view the application.
