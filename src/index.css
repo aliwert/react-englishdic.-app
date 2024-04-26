@@ -1,90 +1,92 @@
-/*
-  Based on TailwindCSS recommendations,
-  consider using classes instead of the `@apply` directive
-  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
-*/
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-* {
-  @apply box-border m-0 p-0;
-  font-family: "Oswald", sans-serif;
-}
-body {
-  @apply flex items-center justify-center min-h-screen w-full bg-cover;
-  background: #f0f0f0 url(../public/wp3642678.jpg) no-repeat fixed center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+  * {
+    @apply box-border m-0 p-0;
+    font-family: "Oswald", sans-serif;
+  }
+  body {
+    @apply flex items-center justify-center min-h-screen w-full bg-cover;
+    background: #f0f0f0 url(../public/wp3642678.jpg) no-repeat fixed center;
+  }
 }
 ::selection {
   @apply text-white;
   background: #4d59fb;
 }
-.wrapper {
-  @apply w-[400px] shadow-[0_10px_20px_rgba(0,0,0,0.1)] p-[30px] rounded-[30px];
-  background: #fff;
-}
-.wrapper header {
-  @apply text-2xl font-semibold text-center mb-5;
-}
-.wrapper .search {
-  @apply relative mb-5;
-}
-.search input {
-  @apply h-[50px] w-full text-base border px-10 py-0 rounded-[5px] ;
-  outline: none;
-}
-.search input::placeholder {
-  @apply text-[#999];
-}
-.search :where(i, span) {
-  @apply absolute text-[#999] -translate-y-2/4 top-2/4;
-}
-.search i {
-  @apply pointer-events-none text-base left-[15px];
-}
-.search input:focus ~ i {
-  @apply text-[#4d59fb];
-}
-.search span {
-  @apply cursor-pointer text-lg hidden right-[15px];
-}
-.search input:valid ~ span {
-  @apply block;
-}
-.wrapper .info-text {
-  @apply text-sm text-[#777] mb-[15px];
-}
-.wrapper ul li {
-  @apply flex items-center justify-between mb-[15px] pb-[15px];
-  list-style: none;
-}
-ul li:last-child {
-  @apply mb-0;
-}
-ul .word p {
-  @apply text-xl font-semibold;
-}
-ul .word span {
-  @apply text-xs text-[#aaa];
-}
-ul .word i {
-  @apply text-[#4d59fb] text-lg cursor-pointer;
-}
-ul .content {
-  @apply max-h-[200px] overflow-y-auto;
-}
-ul .content::-webkit-scrollbar {
-  @apply w-[5px];
-}
-.content li .details {
-  @apply pl-2.5;
-}
-.content li p {
-  @apply text-base font-medium;
-}
-.content li span {
-  @apply text-sm text-[#777];
-}
-.content .synonyms .list {
-  @apply flex flex-wrap;
-}
-.content .synonyms span {
-  @apply cursor-pointer underline text-[#4d59fb] mr-[5px];
+@layer components {
+  .wrapper {
+    @apply w-[400px] shadow-[0_10px_20px_rgba(0,0,0,0.1)] p-[30px] rounded-[30px];
+    background: #fff;
+  }
+  .wrapper header {
+    @apply text-2xl font-semibold text-center mb-5;
+  }
+  .wrapper .search {
+    @apply relative mb-5;
+  }
+  .search input {
+    @apply h-[50px] w-full text-base border px-10 py-0 rounded-[5px];
+    outline: none;
+  }
+  .search input::placeholder {
+    @apply text-[#999];
+  }
+  .search :where(i, span) {
+    @apply absolute text-[#999] -translate-y-2/4 top-2/4;
+  }
+  .search i {
+    @apply pointer-events-none text-base left-[15px];
+  }
+  .search input:focus ~ i {
+    @apply text-[#4d59fb];
+  }
+  .search span {
+    @apply cursor-pointer text-lg hidden right-[15px];
+  }
+  .search input:valid ~ span {
+    @apply block;
+  }
+  .wrapper .info-text {
+    @apply text-sm text-[#777] mb-[15px];
+  }
+  .wrapper ul li {
+    @apply flex items-center justify-between mb-[15px] pb-[15px];
+    list-style: none;
+  }
+  ul li:last-child {
+    @apply mb-0;
+  }
+  ul .word p {
+    @apply text-xl font-semibold;
+  }
+  ul .word span {
+    @apply text-xs text-[#aaa];
+  }
+  ul .word i {
+    @apply text-[#4d59fb] text-lg cursor-pointer;
+  }
+  ul .content {
+    @apply max-h-[200px] overflow-y-auto;
+  }
+  ul .content::-webkit-scrollbar {
+    @apply w-[5px];
+  }
+  .content li .details {
+    @apply pl-2.5;
+  }
+  .content li p {
+    @apply text-base font-medium;
+  }
+  .content li span {
+    @apply text-sm text-[#777];
+  }
+  .content .synonyms .list {
+    @apply flex flex-wrap;
+  }
+  .content .synonyms span {
+    @apply cursor-pointer underline text-[#4d59fb] mr-[5px];
+  }
 }
