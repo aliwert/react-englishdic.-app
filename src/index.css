@@ -1,173 +1,90 @@
+/*
+  Based on TailwindCSS recommendations,
+  consider using classes instead of the `@apply` directive
+  @see https://tailwindcss.com/docs/reusing-styles#avoiding-premature-abstraction
+*/
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  @apply box-border m-0 p-0;
   font-family: "Oswald", sans-serif;
 }
-
-
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100%;
-    background: #f0f0f0 url(../public/wp3642678.jpg) no-repeat fixed center;
-    background-size: cover;
-  }
-  
-
+  @apply flex items-center justify-center min-h-screen w-full bg-cover;
+  background: #f0f0f0 url(../public/wp3642678.jpg) no-repeat fixed center;
+}
 ::selection {
-  color: #fff;
+  @apply text-white;
   background: #4d59fb;
 }
-
-
 .wrapper {
-  width: 400px; 
-  border-radius: 30px; 
+  @apply w-[400px] shadow-[0_10px_20px_rgba(0,0,0,0.1)] p-[30px] rounded-[30px];
   background: #fff;
-  padding: 30px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
-
-
 .wrapper header {
-  font-size: 24px; 
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 20px; 
+  @apply text-2xl font-semibold text-center mb-5;
 }
-
-
 .wrapper .search {
-  position: relative;
-  margin-bottom: 20px;
+  @apply relative mb-5;
 }
-
 .search input {
-  height: 50px;
-  width: 100%;
+  @apply h-[50px] w-full text-base border px-10 py-0 rounded-[5px] ;
   outline: none;
-  font-size: 16px;
-  border-radius: 5px;
-  padding: 0 40px;
-  border: 1px solid #ccc;
 }
-
-.search input:focus {
-  border: 2px solid #4d59fb;
-}
-
 .search input::placeholder {
-  color: #999;
+  @apply text-[#999];
 }
-
 .search :where(i, span) {
-  position: absolute;
-  top: 50%;
-  color: #999;
-  transform: translateY(-50%);
+  @apply absolute text-[#999] -translate-y-2/4 top-2/4;
 }
-
 .search i {
-  left: 15px;
-  pointer-events: none;
-  font-size: 16px;
+  @apply pointer-events-none text-base left-[15px];
 }
-
 .search input:focus ~ i {
-  color: #4d59fb;
+  @apply text-[#4d59fb];
 }
-
 .search span {
-  right: 15px;
-  cursor: pointer;
-  font-size: 18px;
-  display: none;
+  @apply cursor-pointer text-lg hidden right-[15px];
 }
-
 .search input:valid ~ span {
-  display: block;
+  @apply block;
 }
-
-
 .wrapper .info-text {
-  font-size: 14px; 
-  color: #777;
-  margin-bottom: 15px;
+  @apply text-sm text-[#777] mb-[15px];
 }
-
-
 .wrapper ul li {
-  display: flex;
+  @apply flex items-center justify-between mb-[15px] pb-[15px];
   list-style: none;
-  margin-bottom: 15px; 
-  align-items: center;
-  padding-bottom: 15px; 
-  border-bottom: 1px solid #eee;
-  justify-content: space-between;
 }
-
 ul li:last-child {
-  margin-bottom: 0;
-  border-bottom: none; 
+  @apply mb-0;
 }
-
-
 ul .word p {
-  font-size: 20px; 
-  font-weight: 600; 
+  @apply text-xl font-semibold;
 }
-
 ul .word span {
-  font-size: 12px;
-  color: #aaa; 
+  @apply text-xs text-[#aaa];
 }
-
-
 ul .word i {
-  color: #4d59fb; 
-  font-size: 18px; 
-  cursor: pointer;
+  @apply text-[#4d59fb] text-lg cursor-pointer;
 }
-
-
 ul .content {
-  max-height: 200px;
-  overflow-y: auto;
+  @apply max-h-[200px] overflow-y-auto;
 }
-
 ul .content::-webkit-scrollbar {
-  width: 5px;
+  @apply w-[5px];
 }
-
 .content li .details {
-  padding-left: 10px;
-  border-left: 3px solid #4d59fb; 
+  @apply pl-2.5;
 }
-
 .content li p {
-  font-size: 16px; 
-  font-weight: 500;
+  @apply text-base font-medium;
 }
-
 .content li span {
-  font-size: 14px; 
-  color: #777; 
+  @apply text-sm text-[#777];
 }
-
-
 .content .synonyms .list {
-  display: flex;
-  flex-wrap: wrap;
+  @apply flex flex-wrap;
 }
-
 .content .synonyms span {
-  cursor: pointer;
-  margin-right: 5px;
-  text-decoration: underline;
-  color: #4d59fb;
+  @apply cursor-pointer underline text-[#4d59fb] mr-[5px];
 }

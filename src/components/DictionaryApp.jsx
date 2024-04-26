@@ -90,8 +90,7 @@ function DictionaryApp() {
       <ul>
         <li className="word">
           <div className="details">
-            <p>{word}</p>
-            <span>{word ? "Part of Speech" : ""}</span>
+            <span>{word ? "Pronunciation not found" : ""}</span>
           </div>
           <i className="fas fa-volume-up" onClick={playAudio}></i>
         </li>
