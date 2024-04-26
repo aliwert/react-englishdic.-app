@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Switch from "./Switch";
 
 function DictionaryApp() {
   const [word, setWord] = useState("");
